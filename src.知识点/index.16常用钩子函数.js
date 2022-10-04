@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
-
+// 只有类组件才有生命周期。函数组件没有
 class App extends React.Component {
   // 创建组件时，最先执行。
   constructor(props) {
