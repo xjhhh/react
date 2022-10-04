@@ -79,7 +79,7 @@ class Counter extends React.Component {
   componentWillUnmount() {
     console.warn("componentWillUnmount");
 
-    // 清理工作（定时器）
+    // 清理工作（定时器，监听）
     clearInterval(this.timerId);
   }
 }
