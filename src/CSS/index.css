@@ -1,0 +1,17 @@
+.ccc {
+  color: crimson;
+  background-color: blueviolet;
+}
+.app {
+  width: 300px;
+  border: 1px solid;
+  padding: 10px;
+}
+.user {
+  width: 292px;
+  margin-bottom: 10px;
+}
+.content {
+  width: 292px;
+  display: block;
+}

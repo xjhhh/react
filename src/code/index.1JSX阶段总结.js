@@ -2,7 +2,7 @@ import React from "react";
 
 import ReactDOM from "react-dom";
 
-import "./CSS/index.css";
+import "../CSS/index.css";
 // import { createRoot } from 'react-dom/client'
 
 // const title = React.createElement('h1', null, 'Hello world !!!');

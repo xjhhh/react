@@ -22,7 +22,6 @@ class Mouse extends React.Component {
     window.addEventListener("mousemove", this.handleMouseMove); // 监听鼠标移动
   }
   render() {
-    // return null;
     // return this.props.render(this.state);
     return this.props.children(this.state);
   }
@@ -34,45 +33,34 @@ class Mouse extends React.Component {
 Mouse.propTypes = {
   children: PropTypes.func.isRequired,
 };
+
+const Position = (mouse) => (
+  <h1>
+    鼠标位置： {mouse.x} {mouse.y}
+  </h1>
+);
+
+const Cat = (mouse) => (
+  <img
+    src={img}
+    alt="cat"
+    style={{
+      position: "absolute",
+      top: mouse.y - 62.5,
+      left: mouse.x - 38,
+    }}
+  ></img>
+);
 class App extends React.Component {
   render() {
     return (
       <div>
         <h1> render props模式</h1>
-        {/* <Mouse
-          render={(mouse) => {
-            return (
-              <h1>
-                鼠标位置： {mouse.x} {mouse.y}
-              </h1>
-            );
-          }}
-        /> */}
+        {/* <Mouse render={Position} /> */}
+        {/* <Mouse render={Cat}></Mouse> */}
         {/* 推荐使用children代替render属性 */}
-        <Mouse>
-          {(mouse) => {
-            return (
-              <h1>
-                鼠标位置： {mouse.x} {mouse.y}
-              </h1>
-            );
-          }}
-        </Mouse>
-        {/* <Mouse
-          render={(mouse) => {
-            return (
-              <img
-                src={img}
-                alt="cat"
-                style={{
-                  position: "absolute",
-                  top: mouse.y - 62.5,
-                  left: mouse.x - 38,
-                }}
-              ></img>
-            );
-          }}
-        ></Mouse> */}
+        <Mouse>{Position}</Mouse>
+        <Mouse>{Cat}</Mouse>
       </div>
     );
   }
