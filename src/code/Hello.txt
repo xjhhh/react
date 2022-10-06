@@ -1,0 +1,13 @@
+React 基础
+
+1.React是构建用户界面的JavaScript库
+
+2.使用react时，推荐使用脚手架方式。
+
+3.初始化项目命令: npx create-react-app my-app。
+
+4.启动项目命令:  yarnstart  (或  npmstart)。
+
+5.React.createElement()方法用于创建react元素(知道)。
+
+6.ReactDOM.render()方法负责渲染react元素到页面中。
