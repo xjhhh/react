@@ -44,12 +44,18 @@ class App extends React.Component {
       alert("请输入评论人和评论内容~");
       return;
     }
-    comments.unshift({
-      id: comments.length + 1,
-      name: userName,
-      content: userContent,
+    this.setState({
+      comments: [
+        {
+          id: comments.length + 1,
+          name: userName,
+          content: userContent,
+        },
+        ...comments,
+      ],
+      userName: "",
+      userContent: "",
     });
-    this.setState({ comments: comments, userName: "", userContent: "" });
   };
   render() {
     const { userName, userContent } = this.state;
