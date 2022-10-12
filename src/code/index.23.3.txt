@@ -13,4 +13,4 @@ React原理揭秘
 6.state+JSX→虚拟DOM。
 
 7.虚拟DOM的真正价值从来都不是性能。
-  让react摆脱了运行环境的限制，只要能够运行js，就能运行react。由于node的存在，js可以运行在任何环境。也就是说react可以运行在任何地方。
+  让react摆脱了运行环境的限制，只要能够运行js，就能运行react。借助node，js可以运行在任何环境。也就是说react可以运行在任何地方。
