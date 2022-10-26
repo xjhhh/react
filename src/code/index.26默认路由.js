@@ -16,7 +16,7 @@ const App = () => (
     <div>
       <h1>默认路由和模糊匹配</h1>
       {/* 模糊匹配：只要to属性以某个path开头，就可以匹配这个path */}
-      <Link to="/login">登录页面</Link>
+      <Link to="/login/a/b/c">登录页面</Link>
       {/* 默认路由 */}
       <Route path="/" component={Home}></Route>
       <Route path="/login" component={Login}></Route>
